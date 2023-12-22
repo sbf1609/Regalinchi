@@ -3,12 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¿A dónde nos vamos?</title>
+  <title>Grid de Imágenes con Hover</title>
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
     }
+	
+	p{
+	  display: flex;
+	  justify-content: center;
+	}
+	
+	button{
+	   font-size: 20px;
+	}
 
     .grid-container {
       display: grid;
@@ -68,6 +77,7 @@
       height: 100%;
     }
   </style>
+ 
 </head>
 <body>
 
@@ -105,6 +115,17 @@
       </div>
     </div>
   </div>
-
+  <p><button>Probar suerte</button></p>
+   <script>
+	document.querySelector("button").addEventListener("click",()=>{
+		var ciudad = prompt("Escribe una de las ciudades a las que vamos a ir (primera mayúsculas y revisando que no falte ninguna letra)");
+		
+		if (ciudad == "Malmo" || ciudad == "Malmö" || ciudad == "Copenhague"){
+           window.open("https://drive.google.com/file/d/1fbhQ_1soN_bmjF4xG1fkXhXJglcfNKJH/view");  
+		} else {
+		   alert("Toca seguir probando y Papy podría darte más pistas");
+		}
+	});
+  </script>
 </body>
 </html>
